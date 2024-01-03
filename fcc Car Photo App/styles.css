@@ -1,4 +1,17 @@
 
+header{
+    background-color: white;
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: fit-content;
+}
+
+h1{
+    font-size: 50px;
+}
+
 body{
     background-image: url(https://png.pngtree.com/background/20210715/original/pngtree-simple-cute-hand-drawn-cat-paw-background-picture-image_1282889.jpg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
@@ -8,10 +21,6 @@ body{
 main{
     background-color: rgb(215, 38, 64);
     padding: 20px;
-}
-
-h1{
-    margin-top: 0;
 }
 
 footer{
