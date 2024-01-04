@@ -1,7 +1,7 @@
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 20px;
+    padding: 24px;
     max-width: 500px;
     margin: 0 auto;
     background-color: rgb(24, 0, 68);
@@ -9,13 +9,23 @@ body{
 }
 
 fieldset{
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid blueviolet;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.25);
+}
+
+fieldset:last-of-type{
+    border: none;
 }
 
 h1{
     color: blueviolet;
+    text-align: center;
+}
+
+p{
+    text-align: center;
 }
 
 label{
@@ -25,4 +35,25 @@ label{
 
 .text-input{
     width: 100%;
+    margin-top: 4px;
+    background-color: rgb(52, 14, 88);
+    border: none;
 }
+
+input[type="submit"]{
+    display: block;
+    margin: 24px auto;
+}
+
+.row{
+    text-align: left;
+}
+
+#cv{
+    background-color: rgb(52, 14, 88);
+}
+
+select{
+    color: white
+}
+
