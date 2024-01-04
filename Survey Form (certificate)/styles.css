@@ -38,6 +38,7 @@ label{
     margin-top: 4px;
     background-color: rgb(52, 14, 88);
     border: none;
+    color: white;
 }
 
 input[type="submit"]{

@@ -13,7 +13,7 @@
       <fieldset id="personal-data">
         <label id="name-label" for="name">Full name<input class="text-input" required placeholder="Enter your full name" id="name" type="text"></label>
         <label id="email-label" for="email">E-mail<input class="text-input" placeholder="example@gmail.com" required id="email" type="email"></label>
-        <label id="number-label" for="number">Phone number<input class="text-input" placeholder="Enter your phone number" required id="number" type="text"></label>
+        <label id="number-label" for="number">Phone number<input class="text-input" placeholder="Enter your phone number" required id="number" type="text" pattern="[+,0-9]{9,12}"></label>
         <label for="dropdown">Region
           <select class="text-input" id="dropdown">
             <option class="not-selected">(not selected)</option>
@@ -43,25 +43,25 @@
           <label for="male"><input id="male" name="gender" type="radio" checked value="male"> Male</label>
           <label for="female"><input id="female" name="gender" type="radio" value="female"> Female</label>
       </fieldset>
-      <fieldset id="add-comment">
-        <label for="comment">What is your expected salary? <textarea class="text-input" id="comment" rows="3" cols="30" placeholder="gross/net"></textarea></label>
-      </fieldset>
       <fieldset id="skills">
-      <legend>Choose skills you have (required)</legend>
-        <table>
-            <tr>
-                <th class="row"><label for="terms"><input id="terms" type="checkbox" value="precision"> Precision</label></th>
-                <th class="row"><label for="terms"><input id="terms" type="checkbox" value="quick learning"> Quick learning</label></th>
-            </tr>
-            <tr>
-                <th class="first-row"><label for="terms"><input id="terms" type="checkbox" value="critical thinking"> Critical thinking</label></th>
-                <th class="row"><label for="terms"><input id="terms" type="checkbox" value="work under time pressure"> Work under time pressure</label></th>
-            </tr>
-            <tr>
-                <th class="row"><label for="terms"><input id="terms" type="checkbox" value="creative"> Creative</label></th>
-                <th class="row"><label for="terms"><input id="terms" type="checkbox" value="creative"> None of the above</label></th>
-            </tr>
-        </table>
+        <legend>Choose skills you have (required)</legend>
+          <table>
+              <tr>
+                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="precision"> Precision</label></th>
+                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="quick learning"> Quick learning</label></th>
+              </tr>
+              <tr>
+                  <th class="first-row"><label for="terms"><input id="terms" type="checkbox" value="critical thinking"> Critical thinking</label></th>
+                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="work under time pressure"> Work under time pressure</label></th>
+              </tr>
+              <tr>
+                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="creative"> Creative</label></th>
+                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="creative"> None of the above</label></th>
+              </tr>
+          </table>
+        </fieldset>
+      <fieldset id="add-comment">
+        <label for="comment">What is your expected salary? <textarea required class="text-input" id="comment" rows="3" cols="30" placeholder="gross/net"></textarea></label>
       </fieldset>
       <fieldset id="add-resume" for="cv">
         <legend>Upload your CV</legend>
