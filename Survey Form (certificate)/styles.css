@@ -50,6 +50,10 @@ label{
     padding: 0 4px;
 }
 
+.salary{
+    height: fit-content;
+}
+
 input[type="submit"]{
     display: block;
     margin: 24px auto;

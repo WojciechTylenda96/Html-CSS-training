@@ -45,23 +45,15 @@
       </fieldset>
       <fieldset id="skills">
         <legend>Choose skills you have (required)</legend>
-          <table>
-              <tr>
-                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="precision"> Precision</label></th>
-                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="quick learning"> Quick learning</label></th>
-              </tr>
-              <tr>
-                  <th class="first-row"><label for="terms"><input id="terms" type="checkbox" value="critical thinking"> Critical thinking</label></th>
-                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="work under time pressure"> Work under time pressure</label></th>
-              </tr>
-              <tr>
-                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="creative"> Creative</label></th>
-                  <th class="row"><label for="terms"><input id="terms" type="checkbox" value="creative"> None of the above</label></th>
-              </tr>
-          </table>
+          <label for="precision"><input id="precision" type="checkbox" value="precision"> Precision</label>
+          <label for="qlearning"><input id="qlearning" type="checkbox" value="quick learning"> Quick learning</label>
+          <label for="crit-think"><input id="crit-think" type="checkbox" value="critical thinking"> Critical thinking</label>
+          <label for="work-under-press"><input id="work-under-press" type="checkbox" value="work under time pressure"> Work under time pressure</label>
+          <label for="creative"><input id="creative" type="checkbox" value="creative"> Creative</label>
+          <label for="none"><input id="none" type="checkbox" value="creative"> None of the above</label>
         </fieldset>
       <fieldset id="add-comment">
-        <label for="comment">What is your expected salary? <textarea required class="text-input" id="comment" rows="3" cols="30" placeholder="gross/net"></textarea></label>
+        <label for="comment">What is your expected salary? <textarea required class="text-input salary" id="comment" rows="3" cols="30" placeholder="gross/net"></textarea></label>
       </fieldset>
       <fieldset id="add-resume" for="cv">
         <legend>Upload your CV</legend>
