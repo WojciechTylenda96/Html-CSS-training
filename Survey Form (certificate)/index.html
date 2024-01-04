@@ -11,10 +11,10 @@
     <p id="description">Please fill out this form with the required information</p>
     <form id="survey-form">
       <fieldset id="personal-data">
-        <label id="name-label" for="name">Enter your name <input required placeholder="full name" id="name" type="text"></label>
-        <label id="email-label" for="email">Enter your email <input placeholder="example@gmail.com" required id="email" type="email"></label>
-        <label id="number-label" for="number">Enter your age <input placeholder="age" required id="number" type="number" min="18" max="120"></label>
-        <label for="dropdown">Where are you from?
+        <label id="name-label" for="name">Full name<input class="text-input" required placeholder="Enter your full name" id="name" type="text"></label>
+        <label id="email-label" for="email">E-mail<input placeholder="example@gmail.com" required id="email" type="email"></label>
+        <label id="number-label" for="number">Phone number<input placeholder="Enter your phone number" required id="number" type="number" min="18" max="120"></label>
+        <label for="dropdown">Region
           <select id="dropdown">
             <option>(not selected)</option>
             <option>dolnośląskie</option>
@@ -35,6 +35,7 @@
             <option>zachodniopomorskie</option>
           </select>
         </label>
+        <label id="city-label" for="city">City<input required placeholder="Enter your city" id="city" type="text"></label>
       </fieldset>
       <fieldset id="gender">
         <legend>Choose your gender (required)</legend>
@@ -44,7 +45,7 @@
       <fieldset id="add-comment">
         <label for="comment">What is your expected salary? <textarea id="comment" rows="3" cols="30" placeholder="gross/net"></textarea></label>
       </fieldset>
-      <fieldset>
+      <fieldset id="skills">
       <legend>Choose skills you have</legend>
         <label for="terms"><input id="terms" type="checkbox" required value="precision"> Precision</label>
         <label for="terms"><input id="terms" type="checkbox" required value="quick learning"> Quick learning</label>

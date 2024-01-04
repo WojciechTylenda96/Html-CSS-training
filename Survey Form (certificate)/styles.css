@@ -4,4 +4,25 @@ body{
     padding: 20px;
     max-width: 500px;
     margin: 0 auto;
+    background-color: rgb(24, 0, 68);
+    color: white;
+}
+
+fieldset{
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid blueviolet;
+}
+
+h1{
+    color: blueviolet;
+}
+
+label{
+    display: block;
+    margin: 10px;
+}
+
+.text-input{
+    width: 100%;
 }
