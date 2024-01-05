@@ -4,7 +4,6 @@ header{
     margin-top: -100px
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
     width: fit-content;
 }
 
@@ -15,12 +14,15 @@ h1{
 body{
     background-image: url(https://png.pngtree.com/background/20210715/original/pngtree-simple-cute-hand-drawn-cat-paw-background-picture-image_1282889.jpg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    padding: 100px;
+    padding: 0 48px 16px 48px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 main{
     background-color: rgb(215, 38, 64);
-    padding: 20px;
+    padding: 4px 24px 24px 24px;
+    border-radius: 30px;
 }
 
 footer{
@@ -30,5 +32,31 @@ footer{
     margin-left: auto;
     margin-right: auto;
     max-width: fit-content;
+    margin-top: 24px;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 12px;
+}
+
+.gallery img{
+    width: 50%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+img{
+    border-radius: 20px;
+}
+
+#submit-cat{
+    margin: 12px 0 0 0
 }
 
