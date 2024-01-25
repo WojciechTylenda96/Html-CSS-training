@@ -20,18 +20,51 @@
         <header>Why Cypress</header>
         <div>
           <h2>What you'll learn?</h2>
-          <ul class="main-para">
+          <ul>
             <li>The relationship between Cypress and your back end</li>
             <li>How to configure Cypress to fit your app</li>
             <li>Working with (or without!) your authentication mechanism</li>
             <li>Effectively leveraging test data</li>
           </ul>
         </div>
-        <hr>
         <div>
             <h2>In a nutshell</h2>
             <p>Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.</p>
             <p>We make it possible to:</p>
+            <ul>
+                <li>Set up tests</li>
+                <li>Write tests</li>
+                <li>Run tests</li>
+                <li>Debug tests</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Who uses Cypress?</h2>
+            <p>Our users are typically developers or QA engineers building web applications using modern JavaScript frameworks.</p>
+            <p>Cypress enables you to write all types of tests:</p>
+            <ul>
+                <li>End-to-end tests</li>
+                <li>Component tests</li>
+                <li>Integration tests</li>
+                <li>Unit tests</li>
+            </ul>
+            <p>Cypress can test anything that runs in a browser.</p>
+        </div>
+        <div>
+            <h2>Test types</h2>
+            <p>Cypress can be used to write several different types of tests. This can provide even more confidence that your application under test is working as intended.</p>
+            <h3>End- to-end</h3>
+            <p>Cypress was originally designed to run end-to-end (E2E) tests on anything that runs in a browser. A typical E2E test visits the application in a browser and performs actions via the UI just like a real user would.</p>
+            <div class="code">
+                <code>
+                    <div>it('adds todos', () => {</div>
+                    <div class="in1">cy.visit('https://example.cypress.io/')</div>
+                    <div class="in1">cy.get('[data-testid="new-todo"]')</div>
+                    <div class="in2">.type('write code{enter}')</div>
+                    <div class="in2">.type('write tests{enter}')</div>
+                    <div class="in1">cy.get('[data-testid="todos"]').should('have.length', 2)</div>
+                </code>
+            </div>
         </div>
       </section>
       <section class="main-section" id="installing_cypress">
