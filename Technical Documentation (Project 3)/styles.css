@@ -9,11 +9,13 @@
   main{
     border: 2px solid #0f0f0f;
     padding: 8px;
+    position: absolute;
+    left: 270px;
   }
   
   nav{
     display: flex;
-    position: relative;
+    position: fixed;
     flex-direction: column;
     border: 2px solid #0f0f0f;
     padding: 8px;
@@ -34,10 +36,36 @@
     font-size: 40px;
   }
   
-  .main-para{
-    font-size: 18px;
-  }
-  
   body{
     display: flex;
+  }
+
+  p, ul {
+    font-size: 18px;
+  }
+
+  h2{
+    border-bottom: 1px solid #0f0f0f;
+  }
+
+  code{
+    font-family: monospace;
+    font-size: ;
+  }
+
+  .code{
+    background-color: aliceblue;
+    padding: 8px;
+  }
+
+  br{
+    padding-left: 4px;;
+  }
+
+  .in1{
+    text-indent: 10px;
+  }
+
+  .in2{
+    text-indent: 20px;
   }
