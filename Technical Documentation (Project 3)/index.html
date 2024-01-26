@@ -57,14 +57,28 @@
             <p>Cypress was originally designed to run end-to-end (E2E) tests on anything that runs in a browser. A typical E2E test visits the application in a browser and performs actions via the UI just like a real user would.</p>
             <div class="code">
                 <code>
-                    <div>it('adds todos', () => {</div>
-                    <div class="in1">cy.visit('https://example.cypress.io/')</div>
-                    <div class="in1">cy.get('[data-testid="new-todo"]')</div>
-                    <div class="in2">.type('write code{enter}')</div>
-                    <div class="in2">.type('write tests{enter}')</div>
-                    <div class="in1">cy.get('[data-testid="todos"]').should('have.length', 2)</div>
+                    it('adds todos', () => { <br>
+                    &nbsp;cy.visit('https://example.cypress.io/') <br>
+                    &nbsp;cy.get('[data-testid="new-todo"]') <br>
+                    &nbsp;&nbsp;.type('write code{enter}') <br>
+                    &nbsp;&nbsp;.type('write tests{enter}') <br>
+                    &nbsp;cy.get('[data-testid="todos"]').should('have.length', 2)
                 </code>
             </div>
+            <h3>Other</h3>
+            <p>Finally, through a large number of official and 3rd party plugins you can write Cypress a11y, visual, email and other types of tests.</p>
+            <h2>Cypress in the Real World</h2>
+            <img src="https://docs.cypress.io/img/guides/overview/v10/real-world-app.png" alt="cypress in real world">
+            <p>Cypress makes it quick and easy to start testing, and as you begin to test your app, you'll often wonder if you're using best practices or scalable strategies.
+              <br>
+              <br>
+              To guide the way, the Cypress team has created the Real World App (RWA), a full stack example application that demonstrates testing with Cypress in practical and realistic scenarios.
+              <br>
+              <br>
+              The RWA achieves full code-coverage with end-to-end tests across multiple browsers and device sizes, but also includes visual regression tests, API tests, unit tests, and runs them all in an efficient CI pipeline. Use the RWA to learn, experiment, tinker, and practice web application testing with Cypress.
+              <br>
+              <br>
+              The app is bundled with everything you need, just clone the repository and start testing.</p>
         </div>
       </section>
       <section class="main-section" id="installing_cypress">

@@ -50,12 +50,16 @@
 
   code{
     font-family: monospace;
-    font-size: ;
+    font-size: 16px;
   }
 
   .code{
     background-color: aliceblue;
-    padding: 8px;
+    padding: 12px;
+    border-left: 5px solid rgb(116, 186, 247);
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   br{
@@ -68,4 +72,9 @@
 
   .in2{
     text-indent: 20px;
+  }
+
+  img{
+    width: 100%;
+    margin: 0 auto;
   }
