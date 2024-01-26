@@ -102,19 +102,130 @@
         <p>After a moment, the Cypress Launchpad will open.</p>
         <h3>Adding npm Scripts</h3>
         <p>While there's nothing wrong with writing out the full path to the Cypress executable each time, it's much easier and clearer to add Cypress commands to the <code>scripts</code> field in your <code>package.json</code> file.</p>
-        <div class="code"><code>
+        <div class="code">
+          <code>
           { <br>
             &nbsp;"scripts": {<br>
               &nbsp;&nbsp;"cypress:open": "cypress open" <br>
               &nbsp;} <br>
           }
-        </code></div>
+          </code>
+        </div>
+        <p>Now you can invoke the command from your project root like so:</p>
+        <div class="code">
+          <code>npm run cypress:open</code>
+        </div>
+        <p>...and Cypress will open right up for you.</p>
+        <p class="note">
+          <i> 
+            Don't use <code>cypress</code> as the exact name of a script, especially if you use Yarn as package manager. When running commands on the Cypress binary (e.g <code>yarn cypress verify</code>), Yarn will reference the script of the same name instead and Cypress CLI commands may not work as expected. Use instead a descriptive and non-ambiguous script name such as <code>cypress:open</code> or <code>cypress:run</code>.
+          </i>
+        </p>
+        <h3>CLI tools</h3>
+        <p>By installing Cypress through <code>npm</code> you also get access to many other CLI commands. On top of that, Cypress is also a fully baked JavaScript library you can import into your Node scripts.</p>
+        <p>You can read more about the CLI <a href="https://docs.cypress.io/guides/guides/command-line">here</a>.</p>
+        <h2>The Launchpad</h2>
+        <img src="https://docs.cypress.io/img/guides/core-concepts/cypress-app/the-launchpad.png" alt="cypress Launchpad">
+        <p>On opening Cypress, your testing journey begins with the Launchpad. Its job is to guide you through the decisions and configuration tasks you need to complete before you start writing your first test.
+        <br><br>
+        If this is your first time using Cypress it will take you through the following steps in order.</p>
+        <h3>Choosing a Testing Type</h3>
+        <img src="https://docs.cypress.io/img/guides/getting-started/opening-the-app/choose-testing-type.png" alt="type of tests in cypress">
+        <p>The Launchpad presents you with your biggest decision first: What type of testing shall I do? <a href="https://docs.cypress.io/guides/core-concepts/testing-types#What-is-E2E-Testing">E2E Testing</a>, where I run my whole application and visit pages to test them? Or Component Testing, where I mount individual components of my app and test them in isolation?
+        <br><br>
+        For more background on this critical decision, read Testing Types. Alternatively, if you're not sure which type you want and just want to get on with your testing journey, just choose E2E for now - you can always change this later!</p>
+        <h3>Quick Configuration</h3>
+        <img src="https://docs.cypress.io/img/guides/getting-started/opening-the-app/scaffolded-files.png" alt="confiquration of cypress">
+        <p>On the next step, the Launchpad will scaffold out a set of configuration files appropriate to your chosen testing type, and the changes will be listed for you to review. For more information about the generated config check out the Cypress configuration reference, or you can just scroll down and hit "Continue".</p>
+        <h3>Launching a Browser</h3>
+        <img src="https://docs.cypress.io/img/guides/getting-started/opening-the-app/select-browser.png" alt="choose your browser in cypress">
+        <p>Lastly, you're presented with the list of compatible browsers Cypress found on your system. To understand more about your options here, see our guide on launching browsers. Again, don't sweat it, you can switch browsers whenever you want. Now <b>MASH THAT START BUTTON!</b></p>
       </section>
       <section class="main-section" id="writing_first_test">
         <header>Writing First E2E Test</header>
+        <h2>Add a test file</h2>
+        <p>Assuming you've successfully installed Cypress and opened Cypress, now it's time to add your first test. We're going to do this with the Create new empty spec button.</p>
+        <img src="https://docs.cypress.io/img/guides/end-to-end-testing/writing-your-first-end-to-end-test/create-new-empty-spec.png" alt="choose your test spec">
+        <p>On clicking it, you should see a dialog where you can enter the name of your new spec. Just accept the default name for now.</p>
+        <img src="https://docs.cypress.io/img/guides/end-to-end-testing/writing-your-first-end-to-end-test/enter-path-for-new-spec.png" alt="path of test spec">
+        <p>The newly-generated spec is displayed in a confirmation dialog. Just go ahead and close it with the ✕ button.</p>
+        <img src="https://docs.cypress.io/img/guides/end-to-end-testing/writing-your-first-end-to-end-test/new-spec-added-confirmation.png" alt="spec is added">
+        <p>Once we've created that file, you should see it immediately displayed in the list of end-to-end specs. Cypress monitors your spec files for any changes and automatically displays any changes.</p>
+        <img src="https://docs.cypress.io/img/guides/end-to-end-testing/writing-your-first-end-to-end-test/spec-list-with-new-spec.png" alt="you see your tests in cypress">
+        <p>Even though we haven't written any code yet - that's okay - let's click on your new spec and watch Cypress launch it. Spoiler alert: it's probably going to FAIL. Don't worry, it's just because you haven't set up Cypress to visit a page in your app yet! Let's try something different.</p>
       </section>
       <section class="main-section" id="testing_your_app">
         <header>Testing Your App</header>
+        <h2> Step 1: Start your server</h2>
+        <p>Assuming you've successfully installed Cypress and opened Cypress in your project, the first thing you'll want to do is start your local development server that hosts the application.
+          <br><br>
+          It should look something like http://localhost:8080.</p>
+          <p class="note">
+            <i>Don't try to start a web server from within Cypress scripts. Read about best practices here.</i>
+          </p>
+          <p>
+            <b>Why start a local development server?</b>
+            <br><br>
+            You may be wondering - why can't I just visit my application that's already in production?
+            <br><br>
+            While you certainly can test an application that's already deployed, that's not really the sweet spot of Cypress.
+            <br><br>
+            Cypress is built, and optimized around being a tool for your daily local development. In fact, after you start using Cypress for awhile, we believe that you may find it useful to even do all of your development in it.
+            <br><br>
+            Ultimately you'll not only be able to test and develop at the same time, but you'll actually be able to build your application faster while getting tests "for free".
+            <br><br>
+            What's more - since Cypress enables you to do things like stub network requests you can build out your web application without even needing a server to provide valid JSON responses.
+            <br><br>
+            Last but not least - trying to shoehorn tests to an already built application is much more difficult than building it as you write tests. You'll likely encounter a series of initial up front challenges / hurdles that would have otherwise been avoided writing tests from the start.
+            <br><br>
+            The last, and probably most important reason why you want to test against local servers, is the ability to control them. When your application is running in production you can't control it.
+            <br><br>
+            When it's running in development you can:
+            <ul>
+              <li>take shortcuts
+              </li>
+              <li>seed data by running executable scripts
+              </li>
+              <li>expose test environment specific routes
+              </li>
+              <li>disable security features which make automation difficult
+              </li>
+              <li>reset state on the server / database
+              </li>
+            </ul>
+          </p>
+          <p>With that said - you still have the option to have it both ways.
+            <br><br>
+            Many of our users run the majority of their integration tests against a local development server, but then reserve a smaller set of smoke tests that run only against a deployed production app.</p>
+          <h2>Step 2: Visit your server</h2>
+          <p>Once your server is running, it's time to visit it.
+            <br><br>
+            Let's delete the <code>sample.cy.js</code> file created in the previous tutorial now that it's no longer needed.</p>
+            <div class="code">
+              <code>rm cypress/e2e/sample.cy.js</code>
+            </div>
+            <p>Now let's create our own spec file called <code>home_page.cy.js</code>.</p>
+            <div class="code">
+              <code>touch cypress/e2e/home_page.cy.js</code>
+            </div>
+            <p>Once that file is created, you should see it in the list of spec files.</p>
+            <img src="https://docs.cypress.io/img/guides/getting-started/e2e/v10/testing-your-app-home-page-spec.png" alt="">
+            <p>Now you'll need to add in the following code in your test file to visit your server:</p>
+            <div class="code">
+              <code>
+                describe('The Home Page', () => { <br>
+                  &nbsp;it('successfully loads', () => { <br>
+                    &nbsp;&nbsp;cy.visit('http://localhost:8080') // change URL to match your dev URL <br>
+                    &nbsp;}) <br>
+                })
+              </code>
+            </div>
+            <p>Now click on the <code>home_page.cy.js</code> file and watch Cypress open your browser.
+              <br><br>
+              If you forgot to start your server you'll see the error below:
+            </p>
+            <img src="https://docs.cypress.io/img/guides/getting-started/e2e/v10/testing-your-app-visit-fail.png" alt="">
+            <p>If you've started your server, then you should see your application loaded and working.</p>
       </section>
     </main>
   </body>
