@@ -78,3 +78,13 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  .note{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  video{
+    width: 100%;
+    margin: 0 auto;
+  }

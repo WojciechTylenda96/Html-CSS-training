@@ -19,15 +19,6 @@
       <section class="main-section" id="why_cypress">
         <header>Why Cypress</header>
         <div>
-          <h2>What you'll learn?</h2>
-          <ul>
-            <li>The relationship between Cypress and your back end</li>
-            <li>How to configure Cypress to fit your app</li>
-            <li>Working with (or without!) your authentication mechanism</li>
-            <li>Effectively leveraging test data</li>
-          </ul>
-        </div>
-        <div>
             <h2>In a nutshell</h2>
             <p>Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.</p>
             <p>We make it possible to:</p>
@@ -83,9 +74,41 @@
       </section>
       <section class="main-section" id="installing_cypress">
         <header>Installing Cypress</header>
+        <h2>Installing</h2>
+        <p>Install Cypress via <code>npm</code>:</p>
+        <div class="code"><code>cd /your/project/path</code></div>
+        <br>
+        <div class="code"><code>npm install cypress --save-dev</code></div>
+        <p>This will install Cypress locally as a dev dependency for your project.</p>
+        <p class="note"><i>Make sure you have Node.js installed and that you have already run npm init or have a node_modules folder or package.json file in the root of your project to ensure cypress is installed in the correct directory.</i></p>
+        <video src="https://docs.cypress.io/img/snippets/installing-cli.mp4"></video>
+        <p>System proxy properties <code>http_proxy</code>, <code>https_proxy</code> and <code>no_proxy</code> are respected for the download of the Cypress binary. You can also use the npm properties <code>npm_config_proxy</code> and <code>npm_config_https_proxy</code>. Those have lower priority, so they will only be used if the system properties are being resolved to not use a proxy.</p>
+        <p><b>Best Practice</b>
+          <br>
+          The recommended approach is to install Cypress with <code>npm</code> because:</p>
+          <ul>
+            <li>Cypress is versioned like any other dependency.</li>
+            <li>It simplifies running Cypress in Continuous Integration.</li>
+          </ul>
       </section>
       <section class="main-section" id="opening_app">
         <header>Opening App</header>
+        <h2>Cypress open</h2>
+        <p>You can open Cypress from your project root one of the following ways:</p>
+        <p>Using <code>npx</code>:</p>
+        <div class="code"><code>npx cypress open</code></div>
+        <p>Or by using <code>yarn</code>:</p>
+        <div class="code"><code>yarn run cypress open</code></div>
+        <p>After a moment, the Cypress Launchpad will open.</p>
+        <h3>Adding npm Scripts</h3>
+        <p>While there's nothing wrong with writing out the full path to the Cypress executable each time, it's much easier and clearer to add Cypress commands to the <code>scripts</code> field in your <code>package.json</code> file.</p>
+        <div class="code"><code>
+          { <br>
+            &nbsp;"scripts": {<br>
+              &nbsp;&nbsp;"cypress:open": "cypress open" <br>
+              &nbsp;} <br>
+          }
+        </code></div>
       </section>
       <section class="main-section" id="writing_first_test">
         <header>Writing First E2E Test</header>
