@@ -1,0 +1,1 @@
+To check this project you need open Visual Studio Code, have 'Live Preview' extension, then open file index.html and click 'show preview' (icon with lupe) in top right corner.
